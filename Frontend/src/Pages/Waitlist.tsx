@@ -1,24 +1,15 @@
 import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../../../Backend/Firebase/firebase';
-import { FaTwitter } from 'react-icons/fa'
+import { db } from '../Firebase/firebase';
+
 import ParticlesBackground from '../Components/ParticlesBackground';
 
 interface FormData {
   name: string;
   email: string;
 }
-const TwitterIcon = () => (
-  <a
-    href="https://twitter.com/apexoai"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-  >
-    <FaTwitter className="text-xl" />
-  </a>
-);
+
 const Waitlist = () => {
   const [form, setForm] = useState<FormData>({ name: '', email: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -97,7 +88,7 @@ const Waitlist = () => {
             <p className="text-red-600 mt-2 text-center">Oops! Something went wrong.</p>
           )} {/* Close Button (optional) */}
         <div className="absolute left-1/2 -bottom-6 transform -translate-x-1/2">
-          <TwitterIcon/>
+         
         </div>
         </form>
 

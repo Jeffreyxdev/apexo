@@ -9,9 +9,7 @@ const Navigation = () => {
   const controls = useAnimation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleHover = () => {
-    controls.start({ x: [0, -5, 5, -5, 0], transition: { duration: 0.7 } });
-  };
+  
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen((prev) => !prev);
