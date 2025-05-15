@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Root Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+html, body, #root {
+  background-color: #000000;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  
+
+}
+body {
+  @apply font-poppins;
+}
+/* Pic Styling */
+.pic {
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+/* Base Color Variables */
+:root {
+  --purple: #9b87f5;
+  --dark-purple: #6E59A5;
+  --darker-purple: #1A1F2C;
+  --light-purple: #E5DEFF;
+  --soft-purple: #f4f0ff;
+
+  --radius: 12px;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --border: 220 14% 75%;
+  --input: 220 14% 90%;
+  --ring: 220 14% 65%;
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --primary: 240 100% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 100% 96%;
+  --secondary-foreground: 210 34% 21%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 170 96% 40%;
+  --accent-foreground: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --sidebar-background: 222 47% 11%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 240 100% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 170 96% 40%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 222 47% 25%;
+  --sidebar-ring: 222 47% 35%;
+}
+
+/* Dark Theme Overrides */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 199 89% 48%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 199 89% 48%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+/* Animation Keyframes */
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-out {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animation Utility Classes */
+.accordion-down { animation: accordion-down 0.2s ease-out; }
+.accordion-up { animation: accordion-up 0.2s ease-out; }
+.fade-in { animation: fade-in 0.5s ease-out; }
+.fade-out { animation: fade-out 0.5s ease-out; }
+.float { animation: float 6s ease-in-out infinite; }
+.pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+.gradient-shift { animation: gradient-shift 15s ease infinite; }
+.spin-slow { animation: spin-slow 40s linear infinite; }
+
+/* Buttons & Logos */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.button-ai {
+  background-color: white;
+  color: #1A1F2C;
+}
+.button-ai:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Utility Classes */
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
+.container {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1400px) {
+  .container { max-width: 1400px; }
+}
+.bg-primary { background-color: hsl(var(--primary)); }
+.text-primary-foreground { color: hsl(var(--primary-foreground)); }
+.bg-chase { background-color: #1A1F2C; }
+.bg-chase-blue { background-color: #0EA5E9; }
+.bg-chase-teal { background-color: #33C3F0; }
+.bg-chase-light { background-color: #F6F6F7; }
+.text-chase-gray { color: #8E9196; }
+.text-chase-teal { color: #33C3F0; }
+.text-chase-blue { color: #0EA5E9; }
+.radius-lg { border-radius: var(--radius); }
+.radius-md { border-radius: calc(var(--radius) - 2px); }
+.radius-sm { border-radius: calc(var(--radius) - 4px); }
+
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
+  .subIndex {
+    flex-direction: column;
+    overflow-x: hidden;
+    
+  }
+  .spin-slow{
+    margin-left: 120px;
+    width: 80vw;
+  }
+  .nav-full {
+    display: none;
+  }
+  .index-container {
+    text-align: center;
+    padding: 3vw;
+    margin-left: 4vw;
+  }
+  .index-container > h2 {
+    font-size: 40px;
+    max-width: 75vw;
+    margin-left: 120px;
+  }
+  .index-container > p {
+    width: 70vw;
+    margin-left: 120px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .subIndex {
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-left: -40px;
+  }
+  .nav-full > div {
+    width: 90%;
+  }
+  .nav-full > div > ul {
+    margin-top: .5rem;
+  }
+  .index-container {
+    text-align: center;
+    padding-left: 3vw;
+  }
+  .spin-slow{
+    margin-left: -60px;
+  }
+  .index-container > h2 {
+    font-size: 45px;
+    width: 88vw;
+  }
+  .index-container > p {
+    width: 70vw;
+    padding-left: 10rem;
+  }
+}
