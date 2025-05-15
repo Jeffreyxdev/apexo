@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "../Components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../Components/ui/tabs";
-import { Separator } from "../Components/ui/separator";
+
 import {
   Accordion,
   AccordionContent,

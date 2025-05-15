@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../Components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../Components/ui/tabs";
+
 import { Input } from "../Components/ui/input";
 import { Label } from "../Components/ui/label";
 import { Textarea } from "../Components/ui/textarea";

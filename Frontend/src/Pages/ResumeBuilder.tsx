@@ -21,7 +21,6 @@ import { Label } from "../Components/ui/label";
 import {
   Plus,
   Trash2,
-  FilePlus,
   FileText,
   Download,
   Sparkles,

@@ -20,7 +20,7 @@ import { Label } from "../Components/ui/label";
 import { Slider } from "../Components/ui/slider";
 import { Separator } from "../Components/ui/separator";
 import { useToast } from "../hooks/use-toast";
-import { Filter, MapPin, Building, SearchX } from "lucide-react";
+import { Filter,  SearchX } from "lucide-react";
 
 // Mock job data
 const JOBS = [
